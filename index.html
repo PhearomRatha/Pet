@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Donate</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .pet-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            background: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .pet-card img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            margin: 20px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .pet-description {
+            flex: 1;
+            padding: 20px;
+        }
+        .contact-info {
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .rounded-5 {
+            border-radius: 20px;
+        }
+        hr {
+            border-top: 1px solid #ddd;
+        }
+  
+        .footer-gradient {
+            background: linear-gradient(to right, #3454d1 10%, black 80%);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav style="background-color: #3454d1;" class="p-2 text-white">
+            <!-- Hamburger Menu Button for Mobile -->
+            <button class="navbar-toggler d-lg-none border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+        
+            <div class="collapse navbar-collapse show d-lg-block" id="navbarContent">
+                <ul class="d-flex gap-3 gap-lg-5 align-items-center flex-column flex-lg-row mb-0 mt-2 mt-lg-0">
+                    <li class="d-inline">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="m3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                                    <path d="M9 22V12h6v10" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="dropdown d-inline">
+                        <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">
+                            Animals
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#Kitten">Cats</a></li>
+                            <li><a class="dropdown-item" href="#Beagle">Dog</a></li>
+                            <li><a class="dropdown-item" href="#Hamster">Hamsters</a></li>
+                            <li><a class="dropdown-item" href="#Birds">Birds</a></li>
+                            <li><a class="dropdown-item" href="#Fish">Fish</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="d-inline"><a href="/SignInPage.html" class="text-white text-decoration-none">Contact</a></li>
+                    
+                 
+                    <li class="ms-lg-auto d-flex align-items-center w-100 w-lg-auto">
+                        <div class="input-group">
+                            <input type="text" class="form-control rounded-pill" 
+                                   style="padding: 0.58rem 0.5rem; text-indent: 0.5rem;" 
+                                   placeholder="search here...">
+                            <span class="input-group-text bg-transparent border-0" style="margin-left: -3rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="#000" stroke-width="2">
+                                        <circle cx="10.5" cy="10.5" r="5.5" />
+                                        <path stroke-linecap="round" d="M15.414 15L19 18.586" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+        
+                    <!-- User Icon -->
+                    <li class="d-inline">
+                        <a href="/SingUpPage.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16">
+                                <path fill="#fff" d="M16 7.992C16 3.58 12.416 0 8 0S0 3.58 0 7.992c0 2.43 1.104 4.62 2.832 6.09c.016.016.032.016.032.032c.144.112.288.224.448.336c.08.048.144.111.224.175A8 8 0 0 0 8.016 16a8 8 0 0 0 4.48-1.375c.08-.048.144-.111.224-.16c.144-.111.304-.223.448-.335c.016-.016.032-.016.032-.032c1.696-1.487 2.8-3.676 2.8-6.106m-8 7.001c-1.504 0-2.88-.48-4.016-1.279c.016-.128.048-.255.08-.383a4.2 4.2 0 0 1 .416-.991c.176-.304.384-.576.64-.816c.24-.24.528-.463.816-.639c.304-.176.624-.304.976-.4A4.2 4.2 0 0 1 8 10.342a4.18 4.18 0 0 1 2.928 1.166q.552.552.864 1.295q.168.432.24.911A7.03 7.03 0 0 1 8 14.993m-2.448-7.4a2.5 2.5 0 0 1-.208-1.024c0-.351.064-.703.208-1.023s.336-.607.576-.847s.528-.431.848-.575s.672-.208 1.024-.208c.368 0 .704.064 1.024.208s.608.336.848.575c.24.24.432.528.576.847c.144.32.208.672.208 1.023c0 .368-.064.704-.208 1.023a2.8 2.8 0 0 1-.576.848a2.8 2.8 0 0 1-.848.575a2.72 2.72 0 0 1-2.064 0a2.8 2.8 0 0 1-.848-.575a2.5 2.5 0 0 1-.56-.848zm7.424 5.306c0-.032-.016-.048-.016-.08a5.2 5.2 0 0 0-.688-1.406a4.9 4.9 0 0 0-1.088-1.135a5.2 5.2 0 0 0-1.04-.608a3 3 0 0 0 .464-.383a4.2 4.2 0 0 0 .624-.784a3.6 3.6 0 0 0 .528-1.934a3.7 3.7 0 0 0-.288-1.47a3.8 3.8 0 0 0-.816-1.199a3.9 3.9 0 0 0-1.2-.8a3.7 3.7 0 0 0-1.472-.287a3.7 3.7 0 0 0-1.472.288a3.6 3.6 0 0 0-1.2.815a3.8 3.8 0 0 0-.8 1.199a3.7 3.7 0 0 0-.288 1.47q0 .528.144 1.007c.096.336.224.64.4.927c.16.288.384.544.624.784q.216.216.48.383a5 5 0 0 0-1.04.624c-.416.32-.784.703-1.088 1.119a5 5 0 0 0-.688 1.406c-.016.032-.016.064-.016.08C1.776 11.636.992 9.91.992 7.992C.992 4.14 4.144.991 8 .991s7.008 3.149 7.008 7.001a6.96 6.96 0 0 1-2.032 4.907"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="shadow-lg d-flex" style="min-height: 85vh; background-color: #f5f6fa;">
+            <div style="width: 90%; margin: auto;" class="d-flex flex-column flex-lg-row">
+                <div class="w-100 w-lg-50 h-100" style="background-color: #f5f6fa;">
+                    <div class="p-4 p-lg-5 w-100 w-lg-75 h-100 d-flex flex-column justify-content-center text-center text-lg-start">
+                        <h2 style="color: #1a1a1a; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem;">Not Only People <br> Need a house</h2>
+                        <p style="color: #1a37a8; font-size: clamp(1rem, 2vw, 1.1rem); margin-bottom: 2rem;">If you feel lonely, please bring a pet to your home. The pet will be your best friend and you will be happy.</p>
+                        <button class="btn btn-custom rounded-5 px-4 py-2 mx-auto mx-lg-0" style="width: fit-content; background-color: #7bc1d8; color: white;">Find a pet</button>
+                    </div>
+                </div>
+                <div class="w-100 w-lg-50 h-100 d-flex align-items-center justify-content-center py-4">
+                    <div class="rounded-circle bg-white border border-2" 
+                        style="width: min(300px, 80vw); height: min(300px, 80vw); overflow: hidden;">
+                        <img src="/Image/dog.png" alt="Dog" class="w-100 h-100 object-fit-cover" style="transition: transform 0.3s ease;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <!-- Pet Card 1 -->
+                <div class="row pet-card" id="Kitten">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img src="/Image/Image1.jpg" alt="Kitten">
+                    </div>
+                    <div class="col-12 col-md-8 pet-description">
+                        <p>He's a boy and a newborn kitten raised by me. If anyone loves him and wants to take care of this little cutie, contact me at the number below.</p>
+                        <div class="contact-info " style="margin-top: 8rem;">
+                            <b>Phone number:</b> 012 345 678 (Mr. John Son)
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pet Card 2 -->
+                <div class="row pet-card flex-row-reverse" id="Beagle">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img src="/Image/Image2.jpg" alt="Beagle">
+                    </div>
+                    <div class="col-12 col-md-8 pet-description">
+                        <p>She's a girl and a newborn beagle. If anyone loves her and wants to take care of this little cutie, contact me at the number below.</p>
+                        <div class="contact-info"  style="margin-top: 8rem;">
+                            <b>Phone number:</b> 023 456 789 (Ms. Jenny Jen)
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pet Card 3 -->
+                <div class="row pet-card"​ id="Parrot">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img src="/Image/parrot.jpg" alt="Parrot">
+                    </div>
+                    <div class="col-12 col-md-8 pet-description">
+                        <p>She's a girl and a newborn parrot. If anyone loves her and wants to take care of this little cutie, contact me at the number below.</p>
+                        <div class="contact-info"  style="margin-top: 8rem;">
+                            <b>Phone number:</b> 034 567 890 (Ms. Gorgia)
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pet Card 4 -->
+                <div class="row pet-card flex-row-reverse" id="Fish">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img src="/Image/fish.jpg" alt="Fish">
+                    </div>
+                    <div class="col-12 col-md-8 pet-description">
+                        <p>He's a boy and a newborn fish. If anyone loves him and wants to take care of this little swimmer, contact me at the number below.</p>
+                        <div class="contact-info"  style="margin-top: 8rem;">
+                            <b>Phone number:</b> 099 100 200 (Ms. Kitty Kat)
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pet Card 5 -->
+                <div class="row pet-card" id="Hamster">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img src="/Image/hamster.jpg" alt="Hamster">
+                    </div>
+                    <div class="col-12 col-md-8 pet-description">
+                        <p>He's a boy and a newborn hamster. If anyone loves him and wants to take care of this little fluffy boy, contact me at the number below.</p>
+                        <div class="contact-info"  style="margin-top: 8rem;">
+                            <b>Phone number:</b> 099 100 200 (Ms. Kitty Kat)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-gradient text-white py-5">
+        <div class="container">
+            <div class="row">
+       
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">For questions and suggestion</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Support</a></li>
+                    </ul>
+                </div>
+
+              
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Facebook</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Twitter</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="mb-3">Subscribe to our newsletter for updates</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+      
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <hr class="bg-white">
+                    <p class="mb-0">&copy; 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+ 
+</body>
+
+</html>
