@@ -72,8 +72,8 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-3 px-lg-5">
-            <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg bg-primary-subtle px-3 px-lg-5">
+            <div class="container-fluid px-0">
               <a class="navbar-brand" href="#">PawsLove</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -160,7 +160,7 @@
                 serviceContainer.innerHTML += `
                     <div class="col-12 col-md-6">
                     <div class="card border-0 rounded-0 bg-dark text-white h-100">
-                        <img class="card-img-body px-0 img-fluid" src="${services[i].img}" alt="${services[i].alt}" style="height: 100%; object-fit: cover;" >
+                        <img class="card-img-body px-0 img-fluid h-100 object-fit-cover" src="${services[i].img}" alt="${services[i].alt}">
                         <div class="card-img-overlay d-flex flex-column justify-content-end px-3 px-lg-5">
                             <h5 class="card-title"><span class="bg-dark bg-opacity-25">${services[i].cardTitle1}</span><br> <span class="bg-dark bg-opacity-25">${services[i].cardTitle2}</span></h5>
                             <p class="card-text d-none d-md-block"><span class="bg-dark bg-opacity-25">${services[i].cardText}</span></p>
