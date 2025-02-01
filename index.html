@@ -72,7 +72,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary px-3 px-lg-5">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-3 px-lg-5">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">PawsLove</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,48 +112,15 @@
     </header>
     <main>
         <section class="bg-transparent">
-            <div class="container-fluid px-0">
-                <div class="row g-0">
-                  <div class="col-12 col-md-6">
-                    <div class="card border-0 bg-dark text-white h-100">
-                        <img class="card-img-body p-0 img-fluid" src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg" alt="Card image" style="height: 100%; object-fit: cover;" >
-                        <div class="card-img-overlay d-flex flex-column justify-content-end px-3 px-lg-5">
-                            <h5 class="card-title"><span class="bg-dark bg-opacity-25">Not Only People </span><br> <span class="bg-dark bg-opacity-25">Need a house</span></h5>
-                            <p class="card-text d-none d-md-block"><span class="bg-dark bg-opacity-25">If you feel lonely, please bring a pet to your home. The pet will be your best friend and you will be happy.</span></p>
-                            <a class="btn btn-primary" href="/SignUpPage.html" role="button" style="width: fit-content;">Adopt a pet</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="card border-0 bg-dark text-white h-100">
-                        <img class="card-img-body p-0 img-fluid" src="https://wallpapers.com/images/featured/cute-dogs-pictures-rzmuqm1zjmzoowkj.jpg" alt="Card image " style="height: 100%; object-fit: cover;">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end px-3 px-lg-5">
-                          <h5 class="card-title"><span class="bg-dark bg-opacity-25">Looking to find</span> <br> <span class="bg-dark bg-opacity-25">a new home for your pet?</span></h5>
-                          <p class="card-text d-none d-md-block"><span class="bg-dark bg-opacity-25">If you can no longer take care of your pet and want to find it a new family. Register your pet with us to find the ideal candidate to adopt your pet.</span></p>
-                          <a class="btn btn-primary" href="/SignUpPage.html" role="button" style="width: fit-content;">Rehome a pet</a>
-                        </div>
-                      </div>
-                  </div>
-                  </div>
+            <div class=" container-fluid px-0">
+                <div class="row g-0" id="services">
+            
                 </div>
             </div>
         </section>
         
         <section id="about-us"class="shadow-lg d-flex">
-            <div class="w-100 m-auto d-flex flex-column flex-lg-row justify-content-center">
-                <div class="w-100 w-lg-50 h-100" style="background-color: #f5f6fa;">
-                    <div class="p-3 p-lg-5 w-100 w-lg-75 h-100 d-flex flex-column justify-content-center text-center text-lg-start">
-                        <h2 class="mb-3" style="color: #1a1a1a; font-size: clamp(1.8rem, 4vw, 2.5rem);">PawsLove</h2>
-                        <p class="mb-4 "style="color: #1a37a8; font-size: clamp(1rem, 2vw, 1.1rem);">Our organization hopes to find animals their rightfully deserved shelters with loving families. We aim to connect animal-loving individuals to protect and taking care of their adorable creatures.</p>
-                    </div>
-                </div>
-                <div class="w-100 w-lg-50 h-100 d-flex align-items-center justify-content-center p-3 py-lg-4 ">
-                    <div class="rounded-circle bg-white border border-2" 
-                        style="width: min(300px, 80vw); height: min(300px, 80vw); overflow: hidden;">
-                        <img src="/Image/dog.png" alt="Dog" class="w-100 h-100 object-fit-cover" style="transition: transform 0.3s ease;">
-                    </div>
-                </div>
-            </div>
+            
         </section>
         
         <section class="py-5">
@@ -161,93 +128,155 @@
                 <div class="row" id="pet-container">
                 
                 </div>
-            </div>
-            
-            <script>
-                let container = document.getElementById("pet-container");
-               
-                let items = [
-                {
-                    id: '1',
-                    url: 'https://i.pinimg.com/736x/2e/3b/5a/2e3b5a867ef21b3b27d0bda36a1d5195.jpg',
-                    title: 'Max',
-                    des: 'Max is a lively and adventurous puppy who loves exploring new places. He enjoys playing fetch and making new friends!',
-                    phone: '0882201111 (Mr. Sok)'
-                },
-                {
-                    id: '2',
-                    url: 'https://i.pinimg.com/474x/79/4e/20/794e2044044f01489889a76e8a86c72d.jpg',
-                    title: 'Luna',
-                    des: 'Luna is a gentle and affectionate hamster who enjoys cozy naps and being pampered. She loves spending time with kind people.',
-                    phone: '0882202222 (Ms. Dara)'
-                },
-                {
-                    id: '3',
-                    url: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8',
-                    title: 'Bruno',
-                    des: 'Bruno is a fearless and loyal dog who thrives in outdoor adventures. He’s always ready to explore and protect his loved ones.',
-                    phone: '0882203333 (Mr. Vireak)'
-                },
-                {
-                    id: '4',
-                    url: 'https://i.pinimg.com/736x/f5/cb/57/f5cb5719b4fad10964d944918a55575e.jpg',
-                    title: 'Whiskers',
-                    des: 'Whiskers is a playful and affectionate cat who enjoys chasing toys and snuggling up for a cozy nap.',
-                    phone: '0882204444 (Ms. Srey Leak)'
-                },
-                {
-                    id: '5',
-                    url: 'https://i.pinimg.com/474x/d6/63/e9/d663e9bdf0eb0ab8642bd0e15c434a53.jpg',
-                    title: 'Misty',
-                    des: 'Misty is an intelligent and curious cat who loves discovering new things. She enjoys learning tricks with people.',
-                    phone: '0882205555 (Mr. Chantha)'
-                },
-                {
-                    id: '6',
-                    url: 'https://i.pinimg.com/474x/98/d6/60/98d660127a487364343bbfc893bf5174.jpg',
-                    title: 'Rio',
-                    des: 'Rio is a bright and energetic bird who loves to chirp and explore new surroundings. He enjoys flying around  with people.',
-                    phone: '0882206666 (Ms. Kunthea)'
-                },
-                {
-                    id: '7',
-                    url: 'https://i.pinimg.com/736x/ba/9c/36/ba9c3657e3b9c31727ddd429ab408638.jpg',
-                    title: 'Bubbles',
-                    des: 'Bubbles is a graceful and cheerful fish who brings peace to any home. He loves swimming around and creating a soothing atmosphere.',
-                    phone: '0882207777 (Mr. Samnang)'
-                },
-                {
-                    id: '8',
-                    url: 'https://i.pinimg.com/736x/e3/58/a2/e358a2acc7e9f9df524eec0fb6fa0030.jpg',
-                    title: 'Finley',
-                    des: 'Finley is an active and curious fish who enjoys exploring his surroundings. He loves interacting with people and watching the world around him.',
-                    phone: '0882208888 (Ms. Nita)'
-                },
-                {
-                    id: '9',
-                    url: 'https://i.pinimg.com/736x/88/e8/e8/88e8e86bfba06d47628f3c7751a820c7.jpg',
-                    title: 'Peanut',
-                    des: 'Peanut is a cheerful and energetic hamster who enjoys running in his wheel and playing with small toys. he reall love sleeping he sleep and 5 hours a day',
-                    phone: '0882209999 (Mr. Dara)'
-                }
-            ];
-                for (let i = 0; i < items.length; i++) {
-                    container.innerHTML += `
-                        <div class="col-md-4 col-sm-12 ">
-                            <div class="card">
-                                <img src="${items[i].url}" class="card-img-top" alt="Kitten">
-                                <div class="card-body">
-                                    <h5 class="card-title">${items[i].title}</h5>
-                                    <p class="card-text">${items[i].des}</p>
-                                    <p class="contact-info" style="margin-top: 10px;">📞 ${items[i].phone}</p>
-                                </div>
+            </div> 
+        </section>
+        <script>
+            let serviceContainer = document.getElementById("services");
+
+            let services =[
+            {
+                id: '1',
+                img: 'https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg',
+                alt: '2 adorable cats',
+                cardTitle1: 'Not Only People ',
+                cardTitle2: 'Need a house',
+                cardText: 'If you feel lonely, please bring a pet to your home. The pet will be your best friend and you will be happy.',
+                btnText: 'Adopt a pet',
+                link:'/SignUpPage.html'
+            },
+            {
+                id: '2',
+                img: 'https://wallpapers.com/images/featured/cute-dogs-pictures-rzmuqm1zjmzoowkj.jpg',
+                alt: 'adorable dogs',
+                cardTitle1: 'Looking to find',
+                cardTitle2: 'a new home for your pet?',
+                cardText: 'If you can no longer take care of your pet and want to find it a new family. Register your pet with us to find the ideal candidate to adopt your pet.',
+                btnText: 'Rehome a pet',
+                link:'/SignUpPage.html'
+            }
+            ]
+
+            for (let i = 0; i < 2; i++) {
+                serviceContainer.innerHTML += `
+                    <div class="col-12 col-md-6">
+                    <div class="card border-0 rounded-0 bg-dark text-white h-100">
+                        <img class="card-img-body px-0 img-fluid" src="${services[i].img}" alt="${services[i].alt}" style="height: 100%; object-fit: cover;" >
+                        <div class="card-img-overlay d-flex flex-column justify-content-end px-3 px-lg-5">
+                            <h5 class="card-title"><span class="bg-dark bg-opacity-25">${services[i].cardTitle1}</span><br> <span class="bg-dark bg-opacity-25">${services[i].cardTitle2}</span></h5>
+                            <p class="card-text d-none d-md-block"><span class="bg-dark bg-opacity-25">${services[i].cardText}</span></p>
+                            <a class="btn btn-primary" href="${services[i].link}" role="button" style="width: fit-content;">${services[i].btnText}</a>
+                        </div>
+                      </div>
+                  </div>
+                `;
+            }
+
+            let aboutUsContainer = document.getElementById("about-us");
+
+            let aboutUsDetail= {
+                name: 'PawsLove',
+                desc: 'Our organization hopes to find animals their rightfully deserved shelters with loving families. We aim to connect animal-loving individuals to protect and taking care of their adorable creatures.',
+                img: '/Image/dog.png',
+                alt: 'Dog'
+            }
+
+            aboutUsContainer.innerHTML = `<div class="w-100 m-auto d-flex flex-column flex-lg-row justify-content-center">
+                <div class="w-100 w-lg-50 h-100" style="background-color: #f5f6fa;">
+                    <div class="p-3 p-lg-5 w-100 w-lg-75 h-100 d-flex flex-column justify-content-center text-center text-lg-start">
+                        <h2 class="mb-3" style="color: #1a1a1a; font-size: clamp(1.8rem, 4vw, 2.5rem);">${aboutUsDetail.name}</h2>
+                        <p class="mb-4 "style="color: #1a37a8; font-size: clamp(1rem, 2vw, 1.1rem);">${aboutUsDetail.desc}</p>
+                    </div>
+                </div>
+                <div class="w-100 w-lg-50 h-100 d-flex align-items-center justify-content-center p-3 py-lg-4 ">
+                    <div class="rounded-circle bg-white border border-2" 
+                        style="width: min(300px, 80vw); height: min(300px, 80vw); overflow: hidden;">
+                        <img src="${aboutUsDetail.img}" alt="${aboutUsDetail.alt}" class="w-100 h-100 object-fit-cover" style="transition: transform 0.3s ease;">
+                    </div>
+                </div>
+            </div>`;
+
+            let container = document.getElementById("pet-container");
+           
+            let items = [
+            {
+                id: '1',
+                url: 'https://i.pinimg.com/736x/2e/3b/5a/2e3b5a867ef21b3b27d0bda36a1d5195.jpg',
+                title: 'Max',
+                des: 'Max is a lively and adventurous puppy who loves exploring new places. He enjoys playing fetch and making new friends!',
+                phone: '0882201111 (Mr. Sok)'
+            },
+            {
+                id: '2',
+                url: 'https://i.pinimg.com/474x/79/4e/20/794e2044044f01489889a76e8a86c72d.jpg',
+                title: 'Luna',
+                des: 'Luna is a gentle and affectionate hamster who enjoys cozy naps and being pampered. She loves spending time with kind people.',
+                phone: '0882202222 (Ms. Dara)'
+            },
+            {
+                id: '3',
+                url: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8',
+                title: 'Bruno',
+                des: 'Bruno is a fearless and loyal dog who thrives in outdoor adventures. He’s always ready to explore and protect his loved ones.',
+                phone: '0882203333 (Mr. Vireak)'
+            },
+            {
+                id: '4',
+                url: 'https://i.pinimg.com/736x/f5/cb/57/f5cb5719b4fad10964d944918a55575e.jpg',
+                title: 'Whiskers',
+                des: 'Whiskers is a playful and affectionate cat who enjoys chasing toys and snuggling up for a cozy nap.',
+                phone: '0882204444 (Ms. Srey Leak)'
+            },
+            {
+                id: '5',
+                url: 'https://i.pinimg.com/474x/d6/63/e9/d663e9bdf0eb0ab8642bd0e15c434a53.jpg',
+                title: 'Misty',
+                des: 'Misty is an intelligent and curious cat who loves discovering new things. She enjoys learning tricks with people.',
+                phone: '0882205555 (Mr. Chantha)'
+            },
+            {
+                id: '6',
+                url: 'https://i.pinimg.com/474x/98/d6/60/98d660127a487364343bbfc893bf5174.jpg',
+                title: 'Rio',
+                des: 'Rio is a bright and energetic bird who loves to chirp and explore new surroundings. He enjoys flying around  with people.',
+                phone: '0882206666 (Ms. Kunthea)'
+            },
+            {
+                id: '7',
+                url: 'https://i.pinimg.com/736x/ba/9c/36/ba9c3657e3b9c31727ddd429ab408638.jpg',
+                title: 'Bubbles',
+                des: 'Bubbles is a graceful and cheerful fish who brings peace to any home. He loves swimming around and creating a soothing atmosphere.',
+                phone: '0882207777 (Mr. Samnang)'
+            },
+            {
+                id: '8',
+                url: 'https://i.pinimg.com/736x/e3/58/a2/e358a2acc7e9f9df524eec0fb6fa0030.jpg',
+                title: 'Finley',
+                des: 'Finley is an active and curious fish who enjoys exploring his surroundings. He loves interacting with people and watching the world around him.',
+                phone: '0882208888 (Ms. Nita)'
+            },
+            {
+                id: '9',
+                url: 'https://i.pinimg.com/736x/88/e8/e8/88e8e86bfba06d47628f3c7751a820c7.jpg',
+                title: 'Peanut',
+                des: 'Peanut is a cheerful and energetic hamster who enjoys running in his wheel and playing with small toys. he reall love sleeping he sleep and 5 hours a day',
+                phone: '0882209999 (Mr. Dara)'
+            }
+        ];
+            for (let i = 0; i < items.length; i++) {
+                container.innerHTML += `
+                    <div class="col-md-4 col-sm-12 ">
+                        <div class="card">
+                            <img src="${items[i].url}" class="card-img-top" alt="Kitten">
+                            <div class="card-body">
+                                <h5 class="card-title">${items[i].title}</h5>
+                                <p class="card-text">${items[i].des}</p>
+                                <p class="contact-info" style="margin-top: 10px;">📞 ${items[i].phone}</p>
                             </div>
                         </div>
-                    `;
-                }
-            </script>
-            
-        </section>
+                    </div>
+                `;
+            }
+        </script>
 
     </main>
     <footer id="footer" class="footer-gradient text-white py-5">
