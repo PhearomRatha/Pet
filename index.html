@@ -49,6 +49,19 @@
         hr {
             border-top: 1px solid #ddd;
         }
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+          
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+        
+            object-fit: cover;
+        }
   
         .footer-gradient {
             background: linear-gradient(to right, #3454d1 10%, black 80%);
@@ -145,72 +158,102 @@
         </section>
         
         <section class="py-5">
-            <div class="container">
-                <!-- Pet Card 1 -->
-                <div class="row pet-card" id="Kitten">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img src="/Image/Image1.jpg" alt="Kitten">
-                    </div>
-                    <div class="col-12 col-md-8 pet-description">
-                        <p>He's a boy and a newborn kitten raised by me. If anyone loves him and wants to take care of this little cutie, contact me at the number below.</p>
-                        <div class="contact-info " style="margin-top: 8rem;">
-                            <b>Phone number:</b> 012 345 678 (Mr. John Son)
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Pet Card 2 -->
-                <div class="row pet-card flex-row-reverse" id="Beagle">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img src="/Image/Image2.jpg" alt="Beagle">
-                    </div>
-                    <div class="col-12 col-md-8 pet-description">
-                        <p>She's a girl and a newborn beagle. If anyone loves her and wants to take care of this little cutie, contact me at the number below.</p>
-                        <div class="contact-info"  style="margin-top: 8rem;">
-                            <b>Phone number:</b> 023 456 789 (Ms. Jenny Jen)
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Pet Card 3 -->
-                <div class="row pet-card"​ id="Parrot">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img src="/Image/parrot.jpg" alt="Parrot">
-                    </div>
-                    <div class="col-12 col-md-8 pet-description">
-                        <p>She's a girl and a newborn parrot. If anyone loves her and wants to take care of this little cutie, contact me at the number below.</p>
-                        <div class="contact-info"  style="margin-top: 8rem;">
-                            <b>Phone number:</b> 034 567 890 (Ms. Gorgia)
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Pet Card 4 -->
-                <div class="row pet-card flex-row-reverse" id="Fish">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img src="/Image/fish.jpg" alt="Fish">
-                    </div>
-                    <div class="col-12 col-md-8 pet-description">
-                        <p>He's a boy and a newborn fish. If anyone loves him and wants to take care of this little swimmer, contact me at the number below.</p>
-                        <div class="contact-info"  style="margin-top: 8rem;">
-                            <b>Phone number:</b> 099 100 200 (Ms. Kitty Kat)
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Pet Card 5 -->
-                <div class="row pet-card" id="Hamster">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img src="/Image/hamster.jpg" alt="Hamster">
-                    </div>
-                    <div class="col-12 col-md-8 pet-description">
-                        <p>He's a boy and a newborn hamster. If anyone loves him and wants to take care of this little fluffy boy, contact me at the number below.</p>
-                        <div class="contact-info"  style="margin-top: 8rem;">
-                            <b>Phone number:</b> 099 100 200 (Ms. Kitty Kat)
-                        </div>
-                    </div>
+            <div class="container mt-4">
+                <div class="row" id="pet-container">
+                
                 </div>
             </div>
+            
+            <script>
+                let container = document.getElementById("pet-container");
+               
+                let items = [
+                {
+                    id: '1',
+                    url: 'https://i.pinimg.com/736x/2e/3b/5a/2e3b5a867ef21b3b27d0bda36a1d5195.jpg',
+                    title: 'Max',
+                    des: 'Max is a lively and adventurous puppy who loves exploring new places. He enjoys playing fetch and making new friends!',
+                    phone: '0882201111 (Mr. Sok)'
+                },
+                {
+                    id: '2',
+                    url: 'https://i.pinimg.com/474x/79/4e/20/794e2044044f01489889a76e8a86c72d.jpg',
+                    title: 'Luna',
+                    des: 'Luna is a gentle and affectionate hamster who enjoys cozy naps and being pampered. She loves spending time with kind people.',
+                    phone: '0882202222 (Ms. Dara)'
+                },
+                {
+                    id: '3',
+                    url: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8',
+                    title: 'Bruno',
+                    des: 'Bruno is a fearless and loyal dog who thrives in outdoor adventures. He’s always ready to explore and protect his loved ones.',
+                    phone: '0882203333 (Mr. Vireak)'
+                },
+                {
+                    id: '4',
+                    url: 'https://i.pinimg.com/736x/f5/cb/57/f5cb5719b4fad10964d944918a55575e.jpg',
+                    title: 'Whiskers',
+                    des: 'Whiskers is a playful and affectionate cat who enjoys chasing toys and snuggling up for a cozy nap.',
+                    phone: '0882204444 (Ms. Srey Leak)'
+                },
+                {
+                    id: '5',
+                    url: 'https://i.pinimg.com/474x/d6/63/e9/d663e9bdf0eb0ab8642bd0e15c434a53.jpg',
+                    title: 'Misty',
+                    des: 'Misty is an intelligent and curious cat who loves discovering new things. She enjoys learning tricks with people.',
+                    phone: '0882205555 (Mr. Chantha)'
+                },
+                {
+                    id: '6',
+                    url: 'https://i.pinimg.com/474x/98/d6/60/98d660127a487364343bbfc893bf5174.jpg',
+                    title: 'Rio',
+                    des: 'Rio is a bright and energetic bird who loves to chirp and explore new surroundings. He enjoys flying around  with people.',
+                    phone: '0882206666 (Ms. Kunthea)'
+                },
+                {
+                    id: '7',
+                    url: 'https://i.pinimg.com/736x/ba/9c/36/ba9c3657e3b9c31727ddd429ab408638.jpg',
+                    title: 'Bubbles',
+                    des: 'Bubbles is a graceful and cheerful fish who brings peace to any home. He loves swimming around and creating a soothing atmosphere.',
+                    phone: '0882207777 (Mr. Samnang)'
+                },
+                {
+                    id: '8',
+                    url: 'https://i.pinimg.com/736x/e3/58/a2/e358a2acc7e9f9df524eec0fb6fa0030.jpg',
+                    title: 'Finley',
+                    des: 'Finley is an active and curious fish who enjoys exploring his surroundings. He loves interacting with people and watching the world around him.',
+                    phone: '0882208888 (Ms. Nita)'
+                },
+                {
+                    id: '9',
+                    url: 'https://i.pinimg.com/736x/88/e8/e8/88e8e86bfba06d47628f3c7751a820c7.jpg',
+                    title: 'Peanut',
+                    des: 'Peanut is a cheerful and energetic hamster who enjoys running in his wheel and playing with small toys. he reall love sleeping he sleep and 5 hours a day',
+                    phone: '0882209999 (Mr. Dara)'
+                }
+            ];
+            
+            
+            
+            
+              
+            
+                for (let i = 0; i < items.length; i++) {
+                    container.innerHTML += `
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="card">
+                                <img src="${items[i].url}" class="card-img-top" alt="Kitten">
+                                <div class="card-body">
+                                    <h5 class="card-title">${items[i].title}</h5>
+                                    <p class="card-text">${items[i].des}</p>
+                                    <p class="contact-info" style="margin-top: 10px;">📞 ${items[i].phone}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            </script>
+            
         </section>
 
     </main>
